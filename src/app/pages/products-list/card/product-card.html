@@ -1,0 +1,13 @@
+<mat-card appearance="outlined" class="product-card">
+    <mat-card-header>
+        <div mat-card-avatar>
+            <div class="product-card-rating">{{products[0].rating}}★</div>
+        </div>
+        <mat-card-title>{{products[0].name}}</mat-card-title>
+        <mat-card-subtitle>{{products[0].price}} тысяч рублей</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image alt="Product image" [src]="products[0].images[0].url" />
+
+    <mat-card-content></mat-card-content>
+</mat-card>

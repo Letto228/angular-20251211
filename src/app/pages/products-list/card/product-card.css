@@ -1,0 +1,19 @@
+:host {
+    .product-card {
+        width: 400px;
+        margin: 32px;
+
+        .product-card-rating {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        mat-card-title {
+            margin-bottom: 8px;
+        }
+
+        mat-card-subtitle {
+            color: #9d9da5;
+        }
+    }
+}
