@@ -1,0 +1,11 @@
+<mat-card appearance="outlined" class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{product.name}}</mat-card-title>
+        <mat-card-subtitle class="example-card-price">{{ product.price }} $</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image alt="product photo" [src]="product.images[0].url" />
+    <mat-card-actions>
+        <button matButton class="example-card-button" (click)="onProductBuyClick()">BUY</button>
+    </mat-card-actions>
+</mat-card>

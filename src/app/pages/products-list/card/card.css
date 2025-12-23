@@ -1,0 +1,16 @@
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+.example-card-price {
+    color: red;
+    font-size: 20px;
+}
+
+.example-card-button {
+    margin: 0 auto;
+}
