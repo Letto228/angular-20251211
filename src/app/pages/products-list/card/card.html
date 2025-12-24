@@ -1,0 +1,11 @@
+<mat-card appearance="outlined" class="example-card">
+    <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-subtitle>${{price}}</mat-card-subtitle>
+            <img mat-card-xl-image alt="Изображение планшета" [src]="imgUrl" />
+        </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-actions>
+        <button matButton="elevated" (click)="onClick($event)">Отправить</button>
+    </mat-card-actions>
+</mat-card>
