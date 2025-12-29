@@ -9,5 +9,7 @@
 
     <img mat-card-image alt="Product image" [src]="products[0].images[0].url" />
 
-    <mat-card-content></mat-card-content>
+    <mat-card-actions>
+        <button matButton (click)="addToCard()">Добавить в корзину</button>
+    </mat-card-actions>
 </mat-card>
