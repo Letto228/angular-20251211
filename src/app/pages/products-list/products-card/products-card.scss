@@ -1,0 +1,44 @@
+.card {
+    max-width: 360px;
+}
+
+.header {
+  padding: 16px 24px;
+}
+
+.title {
+  font: var(--mat-sys-title-large)
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 16px;
+
+  background-color: white;
+}
+
+.image {
+  max-height: 300px;
+  height: 100%;
+  width: auto;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.price {
+  margin-left: auto;
+
+  font: var(--mat-sys-headline-medium)
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+}

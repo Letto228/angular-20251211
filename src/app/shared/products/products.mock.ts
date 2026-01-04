@@ -2,7 +2,6 @@ import {Product} from './product.type';
 
 export const productsMock: Product[] = [
     {
-         
         _id: '96-planset-dexp-ursus-s290-32-gb-3g-cernyj',
         feedbacksCount: 2,
         subCategory: 'planshety-elektronnye-knigi',
@@ -49,7 +48,6 @@ export const productsMock: Product[] = [
         rating: 5,
     },
     {
-         
         _id: 'mys-provodnaa-steelseries-rival-600-dota-2-edition-cernyj',
         feedbacksCount: 2,
         subCategory: 'periferiya-i-aksessuary',
@@ -92,7 +90,6 @@ export const productsMock: Product[] = [
         rating: 4.5,
     },
     {
-         
         _id: '50-127-sm-televizor-led-harper-50u750ts-cernyj',
         feedbacksCount: 2,
         subCategory: 'televizory-i-aksessuary',
@@ -115,7 +112,6 @@ export const productsMock: Product[] = [
         rating: 4.5,
     },
     {
-         
         _id: '101-planset-lenovo-tab-p10-tb-x705l-32-gb-3g-lte-belyj',
         feedbacksCount: 4,
         subCategory: 'planshety-elektronnye-knigi',
@@ -162,7 +158,6 @@ export const productsMock: Product[] = [
         rating: 3.75,
     },
     {
-         
         _id: 'iso-konnektor-intro-iso-ns-02',
         feedbacksCount: 2,
         subCategory: 'avtozvuk',
@@ -189,7 +184,6 @@ export const productsMock: Product[] = [
         rating: 4,
     },
     {
-         
         _id: 'analogovaa-kamera-hikvision-hiwatch-ds-t209p-28-12mm',
         feedbacksCount: 5,
         subCategory: 'professionalnoe-setevoe-oborudovanie',
@@ -228,7 +222,6 @@ export const productsMock: Product[] = [
         rating: 4.8,
     },
     {
-         
         _id: 'kabel-dexp-hdmi---hdmi-1-m',
         feedbacksCount: 2,
         subCategory: 'televizory-i-aksessuary',
@@ -255,7 +248,6 @@ export const productsMock: Product[] = [
         rating: 4.5,
     },
     {
-         
         _id: '65-165-sm-televizor-led-lg-65sm9800pla-cernyj',
         feedbacksCount: 4,
         subCategory: 'televizory-i-aksessuary',
@@ -302,7 +294,6 @@ export const productsMock: Product[] = [
         rating: 4.75,
     },
     {
-         
         _id: 'vitaa-para-skynet-csl-ftp-4-cu',
         feedbacksCount: 5,
         subCategory: 'professionalnoe-setevoe-oborudovanie',

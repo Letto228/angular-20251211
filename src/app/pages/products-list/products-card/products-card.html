@@ -1,0 +1,23 @@
+<mat-card class="card">
+    <mat-card-header class="header">
+        <mat-card-title class="title">{{product().name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+        <img mat-card-image class="image" [src]="productImage()" [alt]="product().name" />
+        <span class="price">{{product().price}} ₽</span>
+    </mat-card-content>
+    <mat-card-actions class="buttons">
+        <div class="buttons-rating">
+            <button matButton class="button">
+                <mat-icon>favorite</mat-icon>
+                <span>{{product().rating}}</span>
+            </button>
+            <button matButton class="button">
+                <mat-icon>reviews</mat-icon>
+                <span>{{product().feedbacksCount}}</span>
+            </button>
+        </div>
+
+        <button matButton="filled" class="button" (click)="buyProduct()">Купить</button>
+    </mat-card-actions>
+</mat-card>
