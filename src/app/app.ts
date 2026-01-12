@@ -14,8 +14,7 @@ export class App {
 
     public readonly sidenavOpenedStore = signal(true);
 
-    onMenuClick(event: Event) {
-        console.log('Listen menu click', event);
+    toggleSidenav() {
         this.sidenavOpenedStore.update(isOpened => !isOpened);
     }
 }

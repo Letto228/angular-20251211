@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {Card} from './card/card';
+import {productsMock} from '../../shared/products/products.mock';
 
 @Component({
     selector: 'app-products-list',
@@ -7,4 +8,6 @@ import {Card} from './card/card';
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
 })
-export class ProductsList {}
+export class ProductsList {
+    readonly products = signal(productsMock);
+}
