@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import {productsMock} from '../../../shared/products/products.mock';
+import {Component, input, output} from '@angular/core';
 import {
     MatCard,
     MatCardActions,
@@ -10,6 +9,7 @@ import {
 } from '@angular/material/card';
 import {MatIcon} from '@angular/material/icon';
 import {MatButton, MatIconButton} from '@angular/material/button';
+import {Product} from '../../../shared/products/product.type';
 
 @Component({
     selector: 'app-card',
@@ -28,16 +28,14 @@ import {MatButton, MatIconButton} from '@angular/material/button';
     styleUrl: './card.css',
 })
 export class Card {
-    readonly product = productsMock[0];
+    public readonly product = input.required<Product>();
+    public readonly purchase = output<boolean>();
 
-    onProductBuy(event: Event) {
-        event.stopPropagation();
-
-         
-        console.log('Buy product');
+    onProductBuy(event: boolean) {
+        this.purchase.emit(event);
     }
 
     isStarActive(starIndex: number): boolean {
-        return this.product.rating >= starIndex;
+        return this.product().rating >= starIndex;
     }
 }
