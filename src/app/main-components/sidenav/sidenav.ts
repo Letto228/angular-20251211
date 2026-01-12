@@ -10,19 +10,5 @@ import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Sidenav {
-    // public readonly sidenavOpened = input(false);
-
-    // public readonly sidenavOpenedChange = output<boolean>();
-
     public readonly sidenavOpened = model(false);
-
-    // public sidenavOpened = false
-    // public readonly sidenavOpened = signal(false)
-
-    // constructor() {
-    //     setTimeout(() => {
-    //         // this.sidenavOpened = true
-    //         this.sidenavOpened.set(true)
-    //     }, 3000);
-    // }
 }
