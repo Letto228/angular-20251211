@@ -28,8 +28,5 @@ export class ProductsList {
         setTimeout(() => {
             this.cardViewContainerRef().createEmbeddedView(this.cardTemplateRef());
         }, 3000);
-        setTimeout(() => {
-            this.cardViewContainerRef().clear();
-        }, 6000);
     }
 }
