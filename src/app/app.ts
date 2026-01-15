@@ -14,10 +14,4 @@ import {ProductsList} from './pages/products-list/products-list';
 export class App {
     protected readonly title = 'angular-20251211';
     protected readonly imgSrc = './favicon.ico';
-
-    // public readonly sidenavOpenedStore = signal(true);
-
-    // toggleSidenav() {
-    //     this.sidenavOpenedStore.update(isOpened => !isOpened);
-    // }
 }
