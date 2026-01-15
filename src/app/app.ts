@@ -3,10 +3,11 @@ import {Header} from './main-components/header/header';
 import {Sidenav} from './main-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
 import {ProductsList} from './pages/products-list/products-list';
+import {PopupHost} from './main-components/popup-host/popup-host';
 
 @Component({
     selector: 'app-root',
-    imports: [ProductsList, Header, Sidenav, MatList, MatListItem],
+    imports: [ProductsList, Header, Sidenav, MatList, MatListItem, PopupHost],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
