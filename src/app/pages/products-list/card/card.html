@@ -3,7 +3,7 @@
         <mat-card-title>{{ product().name }}</mat-card-title>
         <mat-card-subtitle>{{ product().price }} $</mat-card-subtitle>
     </mat-card-header>
-    <div class="galerey">
+    <!-- <div class="galerey">
         <button mat-icon-button disabled>
             <mat-icon>chevron_left</mat-icon>
         </button>
@@ -11,11 +11,14 @@
         <button mat-icon-button disabled>
             <mat-icon>chevron_right</mat-icon>
         </button>
-    </div>
+    </div> -->
 
     <!-- Homework stand -->
 
-    <!-- <div class="galerey" *appCarousel="let next = next of product().images; let img; let back = back">
+    <div
+        *appCarousel="let next = next of product().images; let img; let back = back"
+        class="galerey"
+    >
         <button mat-icon-button (click)="back()">
             <mat-icon>chevron_left</mat-icon>
         </button>
@@ -23,7 +26,7 @@
         <button mat-icon-button (click)="next()">
             <mat-icon>chevron_right</mat-icon>
         </button>
-    </div> -->
+    </div>
 
     <mat-card-content>
         <p>Отзывы: {{ product().feedbacksCount }}</p>
