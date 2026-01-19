@@ -1,7 +1,40 @@
-<ng-template #viewPort #cardTemplate>
-    <div>
-        <h1>Test</h1>
-        <p>card</p>
-        <app-card class="card" [product]="products()[0]"></app-card>
-    </div>
-</ng-template>
+<!-- <ng-template #viewPort #cardTemplate let-product="currentItem" let-currentIndex="index"> -->
+<!-- <ng-template #viewPort #cardTemplate let-product="$implicit"> -->
+<!-- <ng-template appMyNgFor [appMyNgForOf]="products()" #viewPort #cardTemplate let-product> -->
+<!-- <ng-template [ngIf]="products()" [ngIfElse]="loaderTemplate" > -->
+<!-- <h1>Test</h1> -->
+<!-- <ng-template ngFor [ngForOf]="products()" [ngForTrackBy]="productTrackBy" #viewPort #cardTemplate let-product> -->
+<!-- <div>
+            <h1>Test</h1>
+            <p>card</p>
+            <app-card class="card" [product]="product"></app-card>
+        </div> -->
+<!-- <app-card class="card" [product]="product"></app-card> -->
+<!-- <app-card class="card" [product]="products()[currentIndex]"></app-card> -->
+<!-- </ng-template> -->
+<!-- </ng-template> -->
+
+<!-- <ng-template [ngIf]="products()" [ngIfElse]="loaderTemplate" > -->
+<ng-container *ngIf="products() as products; else: loaderTemplate">
+    <h1>Test</h1>
+    <!-- <ng-template ngFor [ngForOf]="products()" [ngForTrackBy]="productTrackBy" #viewPort #cardTemplate let-product> -->
+    <!-- <app-card
+        *ngFor="let product; index as currentIndex; of: products() as productsFromContext; trackBy: productTrackBy"
+        class="card"
+        [product]="product"
+    ></app-card> -->
+    <!-- <app-card
+        *ngFor="let product; index as currentIndex; of: products as productsFromContext; trackBy: productTrackBy"
+        class="card"
+        [product]="product"
+    ></app-card> -->
+    <app-card
+        *ngFor="let product of products as productsFromContext; index as currentIndex; trackBy: productTrackBy"
+        class="card"
+        [product]="product"
+    ></app-card>
+    <!-- </ng-template> -->
+</ng-container>
+<!-- </ng-template> -->
+
+<ng-template #loaderTemplate>... Loading ...</ng-template>
