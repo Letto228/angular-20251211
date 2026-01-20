@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, viewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, viewChild} from '@angular/core';
 import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
 
 @Component({
@@ -10,6 +10,9 @@ import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
 })
 export class Sidenav {
     private readonly drawerComponent = viewChild.required(MatDrawer);
+    private readonly drawerElementRef = viewChild.required<MatDrawer, ElementRef>(MatDrawer, {
+        read: ElementRef,
+    });
 
     public toggle(): void {
         this.drawerComponent().toggle();
