@@ -12,12 +12,6 @@ export class MyNgFor<Item> {
 
     constructor() {
         this.createViewsByArray();
-
-        // ------------------------------------------------------------------------------------------------------------
-
-        // effect(() => {
-
-        // });
     }
 
     private createViewsByArray() {
