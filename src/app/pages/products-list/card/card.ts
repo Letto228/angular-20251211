@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, input, output} from '@angular/core';
+import {MatButton, MatIconButton} from '@angular/material/button';
 import {
     MatCard,
     MatCardActions,
@@ -8,7 +9,7 @@ import {
     MatCardTitle,
 } from '@angular/material/card';
 import {MatIcon} from '@angular/material/icon';
-import {MatButton, MatIconButton} from '@angular/material/button';
+import {Carousel} from '../../../shared/carousel/carousel';
 import {Product} from '../../../shared/products/product.type';
 
 @Component({
@@ -23,6 +24,7 @@ import {Product} from '../../../shared/products/product.type';
         MatCardContent,
         MatIconButton,
         MatButton,
+        Carousel,
     ],
     templateUrl: './card.html',
     styleUrl: './card.css',
