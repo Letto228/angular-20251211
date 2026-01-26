@@ -1,6 +1,9 @@
-@if (products(); as productsFromControlFlow) { @for (product of productsFromControlFlow; track
-product._id) {
-<app-card class="card" [product]="product"></app-card>
-} @empty { Array is empty } } @else {
-<mat-spinner class="progress-spiner"></mat-spinner>
+@if (products(); as productsFromControlFlow) {
+<div class="scroll-container">
+    @for (product of productsFromControlFlow; track product._id) {
+    <app-card class="card" [product]="product"></app-card>
+    } @empty { Array is empty }
+</div>
+} @else {
+<mat-spinner></mat-spinner>
 }
