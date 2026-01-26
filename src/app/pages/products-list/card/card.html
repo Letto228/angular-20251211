@@ -1,7 +1,18 @@
 <mat-card class="card">
     <mat-card-header>
         <mat-card-title>{{ product().name }}</mat-card-title>
-        <mat-card-subtitle>{{ product().price }} $</mat-card-subtitle>
+        <!-- <mat-card-subtitle>{{ getPrice(product().price) }}</mat-card-subtitle> -->
+        <!-- <mat-card-subtitle>{{ product().price | getPrice : 'Р' }}</mat-card-subtitle> -->
+        <!-- GetPricePipe.transform(product().price, 'Р') -->
+        <!-- <mat-card-subtitle>{{ (product().price | getPrice : 'Р') | json }}</mat-card-subtitle> -->
+        <!-- 
+            JsonPipe.transform(
+                GetPricePipe.transform(product().price, 'Р')
+            )
+        -->
+        <mat-card-subtitle>
+            {{ product().price | currency : 'EUR' : 'symbol-narrow' : '0.0-0' }}
+        </mat-card-subtitle>
     </mat-card-header>
     <!-- <div class="galerey">
         <button mat-icon-button disabled>

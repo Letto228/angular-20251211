@@ -3,13 +3,18 @@ import {Header} from './main-components/header/header';
 import {Sidenav} from './main-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
 import {ProductsList} from './pages/products-list/products-list';
+import {InsertShadow} from './shared/insert-shadow/insert-shadow';
 
 @Component({
     selector: 'app-root',
-    imports: [ProductsList, Header, Sidenav, MatList, MatListItem],
+    imports: [ProductsList, Header, Sidenav, MatList, MatListItem, InsertShadow],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    // host: {
+    //     '[style.boxShadow]': 'shadow()',
+    //     '(click)': 'onClick()',
+    // },
 })
 export class App {
     protected readonly title = 'angular-20251211';

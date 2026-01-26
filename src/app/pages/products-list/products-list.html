@@ -1,4 +1,4 @@
-<ng-container *ngIf="products() as products; else: loaderTemplate">
+<!-- <ng-container *ngIf="products() as products; else: loaderTemplate">
     <app-card
         *ngFor="let product of products; trackBy: productTrackBy"
         class="card"
@@ -6,4 +6,17 @@
     ></app-card>
 </ng-container>
 
-<ng-template #loaderTemplate>... Loading ...</ng-template>
+<ng-template #loaderTemplate>
+    <mat-spinner class="progress-spiner"></mat-spinner>
+</ng-template> -->
+
+<!-- ------------------------------------------------------------------------ -->
+
+@if (products(); as productsFromControlFlow) {
+<!-- @for (product of productsFromControlFlow; track productTrackBy($index, product)) { -->
+@for (product of productsFromControlFlow; track product._id) {
+<!-- <app-card class="card" [product]="productsFromControlFlow[$index]"></app-card> -->
+<app-card class="card" [product]="product"></app-card>
+} @empty { Array is empty } } @else {
+<mat-spinner class="progress-spiner"></mat-spinner>
+}
