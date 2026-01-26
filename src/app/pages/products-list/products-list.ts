@@ -2,12 +2,11 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 import {Card} from './card/card';
 import {productsMock} from '../../shared/products/products.mock';
 import {Product} from '../../shared/products/product.type';
-import {NgFor, NgIf} from '@angular/common';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 @Component({
     selector: 'app-products-list',
-    imports: [Card, NgFor, NgIf, MatProgressSpinner],
+    imports: [Card, MatProgressSpinner],
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,7 +17,6 @@ export class ProductsList {
     constructor() {
         setTimeout(() => {
             this.products.set(productsMock);
-            // this.products.set([]);
         }, 3000);
     }
 
