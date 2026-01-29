@@ -2,12 +2,12 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 import {Card} from './card/card';
 import {productsMock} from '../../shared/products/products.mock';
 import {Product} from '../../shared/products/product.type';
-import {NgFor, NgIf} from '@angular/common';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scroll-with-loading.directive';
 
 @Component({
     selector: 'app-products-list',
-    imports: [Card, NgFor, NgIf, MatProgressSpinner],
+    imports: [Card, MatProgressSpinner, ScrollWithLoadingDirective],
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,11 +18,10 @@ export class ProductsList {
     constructor() {
         setTimeout(() => {
             this.products.set(productsMock);
-            // this.products.set([]);
         }, 3000);
     }
 
-    productTrackBy(index: number, item: Product) {
-        return item._id;
+    protected loadNextData() {
+        console.log('Load next data');
     }
 }

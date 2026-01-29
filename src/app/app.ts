@@ -11,10 +11,6 @@ import {InsertShadow} from './shared/insert-shadow/insert-shadow';
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    // host: {
-    //     '[style.boxShadow]': 'shadow()',
-    //     '(click)': 'onClick()',
-    // },
 })
 export class App {
     protected readonly title = 'angular-20251211';
