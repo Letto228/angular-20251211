@@ -15,6 +15,13 @@ import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scrol
 export class ProductsList {
     readonly products = signal<null | Product[]>(null);
 
+    // For easy
+    readonly name = signal('Мышь');
+
+    // For hard
+    readonly propertyName = 'feedbacksCount' as const; // keyof Product
+    readonly searchPropertyValue = signal(5);
+
     constructor() {
         setTimeout(() => {
             this.products.set(productsMock);
