@@ -1,8 +1,8 @@
 <!-- Easy -->
-<!-- @if (products() | productsFilter : name(); as products) { -->
+<!-- @if (products() | productsFilter : name(); as productsFromControlFlow) { -->
 
 <!-- Hard -->
-<!-- @if (products() | filterByProperty : propertyName : searchPropertyValue(); as products) { -->
+<!-- @if (products() | filterByProperty : propertyName : searchPropertyValue(); as productsFromControlFlow) { -->
 
 @if (products(); as productsFromControlFlow) {
 <div appScrollWithLoading class="scroll-container" (loadNextData)="loadNextData()">
