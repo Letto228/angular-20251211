@@ -4,10 +4,11 @@ import {Sidenav} from './main-components/sidenav/sidenav';
 import {MatList, MatListItem} from '@angular/material/list';
 import {ProductsList} from './pages/products-list/products-list';
 import {InsertShadow} from './shared/insert-shadow/insert-shadow';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
     selector: 'app-root',
-    imports: [ProductsList, Header, Sidenav, MatList, MatListItem, InsertShadow],
+    imports: [ProductsList, Header, Sidenav, MatList, MatListItem, InsertShadow, RouterOutlet],
     templateUrl: './app.html',
     styleUrl: './app.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
