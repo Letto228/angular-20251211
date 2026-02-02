@@ -9,7 +9,7 @@ import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Sidenav {
-    private readonly drawerComponent = viewChild.required(MatDrawer);
+    private readonly drawerComponent = viewChild.required(MatDrawer, {read: MatDrawer});
 
     public toggle(): void {
         this.drawerComponent().toggle();
