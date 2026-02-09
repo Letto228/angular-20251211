@@ -7,7 +7,6 @@ export const routes: Routes = [
     {
         path: '',
         redirectTo: '/products-list',
-        // pathMatch: 'prefix',
         pathMatch: 'full',
     },
     {

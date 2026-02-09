@@ -16,10 +16,5 @@ export const appConfig: ApplicationConfig = {
         provideZoneChangeDetection({eventCoalescing: true}),
         provideRouter(routes),
         provideHttpClient(withInterceptors([baseUrlInterceptor, errorInterceptor])),
-        // {
-        //     provide: ProductsApiService,
-        //     useClass: ProductsApiService,
-        // },
-        // ProductsApiService,
     ],
 };

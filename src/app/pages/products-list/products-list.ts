@@ -14,24 +14,9 @@ import {ProductsStoreService} from '../../shared/products/products-store.service
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsList {
-    // private readonly productsApiService = inject(ProductsApiService);
     private readonly productsStoreService = inject(ProductsStoreService);
 
-    // readonly products = signal<null | Product[]>(null);
-    // readonly products = toSignal(this.productsApiService.getProducts$());
-
-    // // For easy
-    // readonly name = signal('Мышь');
-
-    // // For hard
-    // readonly propertyName = 'feedbacksCount' as const; // keyof Product
-    // readonly searchPropertyValue = signal(5);
-
     constructor() {
-        // setTimeout(() => {
-        //     this.products.set(productsMock);
-        // }, 3000);
-
         this.productsStoreService.loadProducts();
     }
 
