@@ -35,10 +35,4 @@ export class ProductsList {
     protected loadNextData() {
         console.log('Load next data');
     }
-
-    protected navigateToProduct(id: Product['_id']) {
-        // this.router.navigateByUrl(`/product/${id}`);
-        // this.router.navigate([`/product/${id}`]);
-        this.router.navigate(['/product', id]);
-    }
 }
