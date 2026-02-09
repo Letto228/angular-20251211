@@ -1,6 +1,4 @@
 import {Routes} from '@angular/router';
-import {ProductsList} from './pages/products-list/products-list';
-import {Product} from './pages/product/product';
 import {NotFound} from './pages/not-found/not-found';
 
 export const routes: Routes = [
@@ -11,13 +9,19 @@ export const routes: Routes = [
     },
     {
         path: 'products-list',
-        component: ProductsList,
-        pathMatch: 'full',
+        // component: ProductsList,
+        loadComponent: () =>
+            import('./pages/products-list/products-list').then(m => m.ProductsList),
+        // pathMatch: 'prefix',
     },
     {
-        path: 'product/id',
-        component: Product,
-        pathMatch: 'full',
+        path: 'product/:id/:name/:id_comment',
+        // component: Product,
+        loadComponent: () => import('./pages/product/product').then(m => m.Product),
+        // pathMatch: 'full',
+        // pathMatch: 'prefix',
+        // children: productRoutes,
+        loadChildren: () => import('./pages/product/product.routes').then(m => m.productRoutes),
     },
     {
         path: '**',
@@ -25,7 +29,7 @@ export const routes: Routes = [
     },
 ];
 
-// url = http://localhost:4200/product/id/fafdsafda
+// url = http://localhost:4200/product/id/type
 // host = http://localhost:4200/
 
-// segments = product/id/fafdsafda
+// segments = product/id/type
