@@ -6,9 +6,6 @@ import {ScrollWithLoadingDirective} from '../../shared/scroll-with-loading/scrol
 import {FilterByPropertyPipe} from '../../shared/filter-by-property/filter-by-property-pipe';
 import {ProductsStoreService} from '../../shared/products/products-store.service';
 import {RouterLink} from '@angular/router';
-import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
-import {JsonPipe} from '@angular/common';
-import {IsStringValidator} from './validators/is-string-validator/is-string-validator';
 
 @Component({
     selector: 'app-products-list',
@@ -18,11 +15,6 @@ import {IsStringValidator} from './validators/is-string-validator/is-string-vali
         ScrollWithLoadingDirective,
         FilterByPropertyPipe,
         RouterLink,
-        MatInput,
-        MatFormField,
-        MatLabel,
-        JsonPipe,
-        IsStringValidator,
     ],
     templateUrl: './products-list.html',
     styleUrl: './products-list.css',
