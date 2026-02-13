@@ -1,0 +1,33 @@
+<form #ngForm="ngForm" (ngSubmit)="log(ngForm.value)">
+    <!-- <div #ngForm="ngForm" ngForm (ngSubmit)="log(ngForm.value)"> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput name="search" [ngModel]="''" />
+    </mat-form-field>
+
+    @if (brands()) {
+        <div ngModelGroup="brands" class="checkbox-container">
+            @for (brand of brands(); track brand; let index = $index) {
+                <!-- <mat-checkbox [ngModel]="false" [name]="`${index}`">{{ brand }}</mat-checkbox> -->
+                <mat-checkbox [ngModel]="false" [name]="brand">{{ brand }}</mat-checkbox>
+            }
+        </div>
+    } @else {
+        <mat-spinner diameter="60" class="loader"></mat-spinner>
+    }
+    <div ngModelGroup="priceRange" class="price-range">
+        <div>
+            Min
+            <app-counter name="min" [ngModel]="0"></app-counter>
+        </div>
+        <div>
+            Max
+            <app-counter name="max" [ngModel]="99999999"></app-counter>
+        </div>
+    </div>
+
+    <!-- <button mat-button (click)="log(ngForm.value)">Отправить</button> -->
+    <button mat-button type="submit">Отправить</button>
+    <input type="submit" />
+    <!-- </div> -->
+</form>

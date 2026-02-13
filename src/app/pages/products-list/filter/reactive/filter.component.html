@@ -1,0 +1,28 @@
+<form [formGroup]="form">
+    <mat-form-field appearance="fill">
+        <mat-label>Search</mat-label>
+        <!-- <input matInput [formControl]="form.get('search')"/> -->
+        <input matInput formControlName="search" />
+    </mat-form-field>
+
+    @if (brands()) {
+        <div formArrayName="brands" class="checkbox-container">
+            @for (brand of brands(); track brand; let index = $index) {
+                <!-- <mat-checkbox [formControl]="form.get('brands')?.get(`${$index}`)">{{ brand }}</mat-checkbox> -->
+                <mat-checkbox [formControlName]="index">{{ brand }}</mat-checkbox>
+            }
+        </div>
+    } @else {
+        <mat-spinner diameter="60" class="loader"></mat-spinner>
+    }
+    <div formGroupName="priceRange" class="price-range">
+        <div>
+            Min
+            <app-counter formControlName="min"></app-counter>
+        </div>
+        <div>
+            Max
+            <app-counter formControlName="max"></app-counter>
+        </div>
+    </div>
+</form>

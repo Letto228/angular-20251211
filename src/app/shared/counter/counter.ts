@@ -1,10 +1,11 @@
 import {ChangeDetectionStrategy, Component, input, signal} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {MatIconButton} from '@angular/material/button';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
     selector: 'app-counter',
-    imports: [MatIconButton],
+    imports: [MatIconButton, MatIcon],
     templateUrl: './counter.html',
     styleUrl: './counter.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
