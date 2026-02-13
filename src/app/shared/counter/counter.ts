@@ -42,7 +42,6 @@ export class Counter implements ControlValueAccessor {
     }
 
     registerOnChange(onChangeCb: (newValue: number) => void): void {
-        // console.log(onChangeCb);
         this.onChange = onChangeCb;
     }
 
